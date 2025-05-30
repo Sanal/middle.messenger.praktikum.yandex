@@ -1,3 +1,9 @@
+@define-mixin hover-effect $color: #646cffaa {
+  &:hover {
+    filter: drop-shadow(0 0 2em $(color));
+  }
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -58,12 +64,10 @@ h1 {
   will-change: filter;
   transition: filter 300ms;
 
-  &:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
+  @mixin hover-effect #646cffaa;
 
-  &.vanilla:hover {
-    filter: drop-shadow(0 0 2em #3178c6aa);
+  &.vanilla {
+    @mixin hover-effect #3178c6aa;
   }
 }
 
