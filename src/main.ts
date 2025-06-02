@@ -1,5 +1,4 @@
 import Handlebars from "handlebars";
-import { setupCounter } from "./counter.ts";
 import templateSource from "./template.hbs?raw";
 import "./style.css";
 
@@ -11,5 +10,3 @@ const html = template({
 });
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = html;
-
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
