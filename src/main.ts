@@ -1,12 +1,19 @@
-import Handlebars from "handlebars";
-import templateSource from "./template.hbs?raw";
+import Handlebars from "handlebars/runtime";
 import "./style.css";
 
-const template = Handlebars.compile(templateSource);
+import { chatsList } from "./data";
 
-const html = template({
-  date: new Date().toLocaleString(),
-  fruits: ["Apple", "Orange", "Kiwi"],
+// partials
+import chatListItem from "./partials/chat-list-item.hbs";
+
+// templates
+import chats from "./templates/chats.hbs";
+
+Handlebars.registerPartial("chatListItem", chatListItem);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.querySelector<HTMLDivElement>("#app");
+  const result = chats({ chatsList });
+
+  root!.innerHTML = result;
 });
-
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = html;

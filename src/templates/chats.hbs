@@ -1,0 +1,44 @@
+<div>
+  <main class="chats-layout">
+    <aside class="sidebar">
+      <header class="sidebar__header sidebar-header">
+        <a class="sidebar-header__profile-link" href="/profile">
+          <span>Профиль</span>
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 9L5 5L1 1" stroke="currentColor"/>
+          </svg>
+        </a>
+        <div class="sidebar-header__search-field">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.495 11.4952C9.87494 13.1152 7.24834 13.1152 5.62831 11.4952C4.00827 9.87512 4.00827 7.24853 5.62831 5.62849C7.24834 4.00846 9.87494 4.00846 11.495 5.62849C13.115 7.24853 13.115 9.87512 11.495 11.4952ZM11.9932 13.0598C9.77547 14.7562 6.58999 14.5902 4.56164 12.5618C2.3525 10.3527 2.3525 6.77097 4.56164 4.56183C6.77078 2.35269 10.3525 2.35269 12.5616 4.56183C14.5899 6.59009 14.756 9.77537 13.0598 11.9931L17.0951 16.0284L16.0284 17.095L11.9932 13.0598Z" fill="currentColor"/>
+          </svg>
+          <input placeholder="Поиск" />
+        </div>
+      </header>
+      <div>
+        {{#each chatsList}}
+          {{> chatListItem name=name time=time preview=preview counter=counter }}
+        {{/each}}
+      </div>
+    </aside>
+    <div>
+      <ul>
+        <li>
+          <a href="/login">Login</a>
+        </li>
+        <li>
+          <a href="/signup">Sign Up</a>
+        </li>
+        <li>
+          <a href="/profile">Profile</a>
+        </li>
+        <li>
+          <a href="/400">400</a>
+        </li>
+        <li>
+          <a href="/500">500</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+</div>
