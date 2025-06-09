@@ -2,6 +2,10 @@
 
 Макет доступен в Figma по [ссылке](https://www.figma.com/design/MyYlEKqFJV54nymp63uTo6/middle.messenger.praktikum.yandex?node-id=0-1&t=IOiOvn7lS07ZHKpN-1).
 
+## Netlify
+
+Развернутая версия доступна по адресу [wdzuq2dkgdgw.netlify.app](https://wdzuq2dkgdgw.netlify.app).
+
 ### Ветка, в которой делаете задания спринта, должна называться sprint_i, где i - номер спринта. Не переименовывайте её.
 
 ### Откройте pull request в ветку main из ветки, где вы разрабатывали проект, и добавьте ссылку на этот pr в README.md в ветке main.
