@@ -1,21 +1,23 @@
-<div class="modal-layout">
-  {{#> modalBox title="Вход"}}
-  <form class="login-form" action="/" method="get">
-    <div class="login-form__wrapper">
-      <div class="login-form__section">
-        {{> inputField label="Логин" placeholder="Введите логин" value="gandalf2000" type="text" }}
-        {{> inputField label="Пароль" placeholder="Введите пароль" value="12345678901234567890123" type="password"
-        error=true errorMessage="Неверный пароль" }}
+<main>
+  <div class="modal-layout">
+    {{#> modalBox title="Вход"}}
+    <form class="login-form" action="/" method="get">
+      <div class="login-form__wrapper">
+        <div class="login-form__section">
+          {{> inputField label="Логин" placeholder="Введите логин" value="gandalf2000" type="text" }}
+          {{> inputField label="Пароль" placeholder="Введите пароль" value="12345678901234567890123" type="password"
+          error=true errorMessage="Неверный пароль" }}
+        </div>
+        <div class="login-form__section">
+          {{#> button type="submit"}}
+          Войти
+          {{/button}}
+          {{#> centeredBox}}
+          <a href="/signup">Зарегистрироваться</a>
+          {{/centeredBox}}
+        </div>
       </div>
-      <div class="login-form__section">
-        {{#> button type="submit"}}
-        Войти
-        {{/button}}
-        {{#> centeredBox}}
-        <a href="/signup">Зарегистрироваться</a>
-        {{/centeredBox}}
-      </div>
-    </div>
-  </form>
-  {{/modalBox}}
-</div>
+    </form>
+    {{/modalBox}}
+  </div>
+</main>
