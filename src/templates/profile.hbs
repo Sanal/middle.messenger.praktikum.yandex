@@ -1,0 +1,23 @@
+<main>
+  {{#> profileLayout}}
+  <div class="profile-view">
+    <div class="profile-view__details">
+      <div class="profile-view__heading">
+        {{> avatar class="profile-view__avatar" width="120" height="120"}}
+        <h1 class="profile-view__title">Гендальф</h1>
+      </div>
+      {{> labeledValue label="Почта" value="gandalf@gg.wp" }}
+      {{> labeledValue label="Логин" value="gandalf2000" }}
+      {{> labeledValue label="Имя" value="Гендальф" }}
+      {{> labeledValue label="Фамилия" value="Белый" }}
+      {{> labeledValue label="Имя в чате" value="Митрандил" }}
+      {{> labeledValue label="Телефон" value="+7 (999) 888-88-88" }}
+    </div>
+    <div class="profile-view__actions">
+      <a href="/profile/edit">Изменить данные</a>
+      <a href="/profile/change-password">Изменить пароль</a>
+      <button type="button" class="inline-button inline-button--danger">Выйти</>
+    </div>
+  </div>
+  {{/profileLayout}}
+</main>
