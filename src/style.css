@@ -404,3 +404,23 @@ a,
     }
   }
 }
+
+.error-view {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+
+  &__message {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+  }
+
+  &__code {
+    font-size: 40px;
+    font-weight: 900;
+  }
+}
