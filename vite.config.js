@@ -1,9 +1,12 @@
-import { defineConfig } from "vite";
-import handlebars from "./vite-plugin-handlebars-precompile";
+import { defineConfig } from 'vite'
+import handlebars from './vite-plugin-handlebars-precompile'
 
 export default defineConfig({
   server: {
     port: 3000,
   },
+  preview: {
+    port: 3000,
+  },
   plugins: [handlebars()],
-});
+})
