@@ -3,5 +3,6 @@ module.exports = {
   plugins: {
     "postcss-nested": {},
     "postcss-mixins": {},
+    "postcss-css-variables": {},
   },
 };
