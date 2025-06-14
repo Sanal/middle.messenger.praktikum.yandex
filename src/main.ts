@@ -14,6 +14,7 @@ import avatar from './partials/avatar.hbs'
 import labeledValue from './partials/labeled-value.hbs'
 import labeledInput from './partials/labeled-input.hbs'
 import errorView from './partials/error-view.hbs'
+import avatarFileInput from './partials/avatar-file-input.hbs'
 import profileLayout from './layout/profile-layout.hbs'
 
 // templates
@@ -36,6 +37,7 @@ Handlebars.registerPartial('labeledValue', labeledValue)
 Handlebars.registerPartial('labeledInput', labeledInput)
 Handlebars.registerPartial('profileLayout', profileLayout)
 Handlebars.registerPartial('errorView', errorView)
+Handlebars.registerPartial('avatarFileInput', avatarFileInput)
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector<HTMLDivElement>('#app')

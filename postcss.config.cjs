@@ -4,5 +4,6 @@ module.exports = {
     'postcss-nested': {},
     'postcss-mixins': {},
     'postcss-css-variables': {},
+    'postcss-hexrgba': {},
   },
 }
