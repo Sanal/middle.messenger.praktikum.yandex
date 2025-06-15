@@ -1,0 +1,37 @@
+.input-field {
+  display: grid;
+  gap: 6px;
+
+  &__label-text {
+    margin-left: 2px;
+    font-size: 10px;
+  }
+
+  &__error {
+    color: var(--danger-color);
+    font-size: 10px;
+  }
+
+  &__input {
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 13px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: var(--secondary-text-color);
+    }
+
+    &:focus {
+      border-color: var(--main-accent-color);
+      outline-color: var(--main-accent-color);
+    }
+
+    &--error {
+      color: var(--danger-color);
+    }
+  }
+}

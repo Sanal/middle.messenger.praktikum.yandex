@@ -1,0 +1,25 @@
+@define-mixin labeled-view {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--border-color);
+
+  &__label {
+    font-weight: 500;
+  }
+}
+
+@define-mixin link-styles {
+  color: var(--main-accent-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--danger {
+    color: var(--danger-color);
+  }
+}

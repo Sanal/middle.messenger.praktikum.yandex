@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars/runtime'
 import { identity, isEmpty } from './utils/mydash'
-import './style.css'
+import './styles/main.css'
 
 import { chatsList } from './data'
 
