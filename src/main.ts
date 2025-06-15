@@ -39,36 +39,49 @@ Handlebars.registerPartial('profileLayout', profileLayout)
 Handlebars.registerPartial('errorView', errorView)
 Handlebars.registerPartial('avatarFileInput', avatarFileInput)
 
+const Routes = {
+  Home: '/',
+  Login: '/login',
+  SignUp: '/signup',
+  Profile: '/profile',
+  ProfileEdit: '/profile/edit',
+  ChangePassword: '/profile/change-password',
+  NotFound: '/404',
+  ServerError: '/500',
+} as const
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector<HTMLDivElement>('#app')
   let result: string
 
-  const [route, subroute] = document.location.pathname
-    .split('?')[0]
-    .split('/')
-    .filter(identity)
+  const route = document.location.pathname.split('?')[0]
 
   // temporary routing
-  if (isEmpty(route)) {
-    result = chats({ chatsList })
-  } else if (route === 'login') {
-    result = login({})
-  } else if (route === 'signup') {
-    result = signup({})
-  } else if (route === 'profile') {
-    if (isEmpty(subroute)) {
+  switch (route) {
+    case Routes.Home:
+      result = chats({ chatsList })
+      break
+    case Routes.Login:
+      result = login({})
+      break
+    case Routes.SignUp:
+      result = signup({})
+      break
+    case Routes.ServerError:
+      result = serverError({})
+      break
+    case Routes.Profile:
       result = profile({})
-    } else if (subroute === 'edit') {
+      break
+    case Routes.ProfileEdit:
       result = profileEdit({})
-    } else if (subroute === 'change-password') {
+      break
+    case Routes.ChangePassword:
       result = changePassword({})
-    } else {
+      break
+    default:
       result = notFound({})
-    }
-  } else if (route === '500') {
-    result = serverError({})
-  } else {
-    result = notFound({})
+      break
   }
 
   root!.innerHTML = result
