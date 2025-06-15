@@ -1,7 +1,7 @@
-import { isEmpty } from "./isEmpty";
+import { isEmpty } from './isEmpty'
 
 export function first(list: any[]) {
   if (!isEmpty(list)) {
-    return list[0];
+    return list[0]
   }
 }

@@ -1,7 +1,7 @@
-import { isEmpty } from "./isEmpty";
+import { isEmpty } from './isEmpty'
 
 export function last(list: any[]) {
   if (!isEmpty(list)) {
-    return list[list.length - 1];
+    return list[list.length - 1]
   }
 }

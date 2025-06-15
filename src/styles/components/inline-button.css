@@ -1,0 +1,6 @@
+.inline-button {
+  @mixin link-styles;
+
+  display: inline;
+  text-align: start;
+}

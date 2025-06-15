@@ -4,17 +4,29 @@
     <form class="login-form" action="/" method="get">
       <div class="login-form__wrapper">
         <div class="login-form__section">
-          {{> inputField label="Логин" placeholder="Введите логин" name="login" value="gandalf2000" type="text" }}
-          {{> inputField label="Пароль" placeholder="Введите пароль" name="password" value="12345678901234567890123"
-          type="password"
-          error=true errorMessage="Неверный пароль" }}
+          {{> inputField
+            label="Логин"
+            placeholder="Введите логин"
+            name="login"
+            value="gandalf2000"
+            type="text"
+          }}
+          {{> inputField
+            label="Пароль"
+            placeholder="Введите пароль"
+            name="password"
+            value="12345678901234567890123"
+            type="password"
+            error=true
+            errorMessage="Неверный пароль"
+          }}
         </div>
         <div class="login-form__section">
           {{#> button type="submit"}}
-          Войти
+            Войти
           {{/button}}
           {{#> centeredBox}}
-          <a href="/signup">Зарегистрироваться</a>
+            <a href="/signup">Зарегистрироваться</a>
           {{/centeredBox}}
         </div>
       </div>
