@@ -1,0 +1,7 @@
+.labeled-value {
+  @mixin labeled-view;
+
+  &__value {
+    color: var(--secondary-text-color);
+  }
+}

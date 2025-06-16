@@ -1,0 +1,70 @@
+<main>
+  <div class="modal-layout">
+    {{#> modalBox title="Регистрация"}}
+    <form class="login-form" action="/" method="get">
+      <div class="login-form__wrapper">
+        <div class="login-form__section">
+          {{> inputField
+            label="Почта"
+            placeholder="Введите адрес эл. почты"
+            name="email"
+            value="gandalf@gg.wp"
+            type="text"
+          }}
+          {{> inputField
+            label="Логин"
+            placeholder="Введите логин"
+            name="login"
+            value="gandalf2000"
+            type="text"
+          }}
+          {{> inputField
+            label="Имя"
+            placeholder="Введите имя"
+            name="first_name"
+            value="Гендальф"
+            type="text"
+          }}
+          {{> inputField
+            label="Фамилия"
+            placeholder="Введите фамилию"
+            name="second_name"
+            value="Белый"
+            type="text"
+          }}
+          {{> inputField
+            label="Телефон"
+            placeholder="Введите номер телефона"
+            name="phone"
+            value="+7 (999) 888-88-88"
+            type="text"
+          }}
+          {{> inputField
+            label="Пароль"
+            placeholder="Введите пароль"
+            name="password"
+            value="12345678901234567890123"
+            type="password" error=true
+          }}
+          {{> inputField label="Пароль ещё раз"
+            placeholder="Введите пароль еще раз"
+            name="repeat_password"
+            value="12345678901234567890123"
+            type="password"
+            error=true
+            errorMessage="Пароли не совпадают"
+          }}
+        </div>
+        <div class="login-form__section">
+          {{#> button type="submit"}}
+            Зарегистрироваться
+          {{/button}}
+          {{#> centeredBox}}
+            <a href="/login">Войти</a>
+          {{/centeredBox}}
+        </div>
+      </div>
+    </form>
+    {{/modalBox}}
+  </div>
+</main>

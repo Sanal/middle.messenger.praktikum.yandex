@@ -1,0 +1,11 @@
+.login-form {
+  &__wrapper {
+    display: grid;
+    gap: 32px;
+  }
+
+  &__section {
+    display: grid;
+    gap: 12px;
+  }
+}

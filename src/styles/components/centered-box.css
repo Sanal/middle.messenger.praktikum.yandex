@@ -1,0 +1,7 @@
+.centered-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+  place-items: center;
+}

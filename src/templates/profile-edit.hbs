@@ -1,0 +1,61 @@
+<main>
+  {{#> profileLayout}}
+  <form action="/profile" method="get">
+    <div class="profile-view">
+      <div class="profile-view__details">
+        <div class="profile-view__heading">
+          {{> avatarFileInput name="avatar" }}
+        </div>
+        {{> labeledInput
+          label="Почта"
+          value="gandalf@gg.wp"
+          placeholder="Введите адрес"
+          name="email" type="text"
+        }}
+        {{> labeledInput
+          label="Логин"
+          value="gandalf2000"
+          placeholder="Введите логин"
+          name="login" type="text"
+        }}
+        {{> labeledInput
+          label="Имя"
+          value="Гендальф"
+          placeholder="Введите имя"
+          name="first_name"
+          type="text"
+        }}
+        {{> labeledInput
+          label="Фамилия"
+          value="Белый"
+          placeholder="Введите фамилию"
+          name="second_name"
+          type="text"
+        }}
+        {{> labeledInput
+          label="Имя в чате"
+          value="Митрандил"
+          placeholder="Введите имя в чате"
+          name="display_name"
+          type="text"
+        }}
+        {{> labeledInput
+          label="Телефон"
+          value="+7 (999) 888-88-88"
+          placeholder="Введите номер"
+          name="phone"
+          type="text"
+        }}
+      </div>
+      <div class="profile-view__actions profile-view__actions--row">
+        {{#> button class="button--secondary" type="button"}}
+          Отменить
+        {{/button}}
+        {{#> button type="submit"}}
+          Сохранить
+        {{/button}}
+      </div>
+    </div>
+  </form>
+  {{/profileLayout}}
+</main>
